@@ -61,6 +61,8 @@ class HeaderWidget extends StatelessWidget {
               child: Image.asset(
                 imagePath,
                 fit: BoxFit.cover,
+                height: 30,
+                alignment: Alignment.topCenter,
                 errorBuilder: (context, error, stackTrace) {
                   return Container(
                     color: AppColors.mediumGrey,

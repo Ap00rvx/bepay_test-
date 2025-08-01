@@ -12,7 +12,6 @@ class _ActionRowState extends State<ActionRow> {
   final actionbt = ["Recieve", "Send", "Swap", "Buy"];
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return Column(
       children: [
         Row(
@@ -25,6 +24,7 @@ class _ActionRowState extends State<ActionRow> {
             // Sell
           ],
         ),
+        const SizedBox(height: 16),
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           height: 40,
@@ -42,7 +42,7 @@ class _ActionRowState extends State<ActionRow> {
                   actions[index],
                   style: TextStyle(
                     fontSize: 20,
-                    letterSpacing: 2,
+                    letterSpacing: 1.5,
                     color: index == 0 ? Colors.black : Colors.grey,
                   ),
                 ),
