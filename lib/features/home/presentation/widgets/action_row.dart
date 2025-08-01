@@ -9,7 +9,7 @@ class ActionRow extends StatefulWidget {
 
 class _ActionRowState extends State<ActionRow> {
   final actions = ["Services", "Assets", "Fiat", "NFT", "AirDrop"];
-  final actionbt = ["Recieve", "Send", "Swap", "Buy", "Sell"];
+  final actionbt = ["Recieve", "Send", "Swap", "Buy"];
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -22,7 +22,7 @@ class _ActionRowState extends State<ActionRow> {
             _buildActionButton(Icons.send, actionbt[1]), // Send
             _buildActionButton(Icons.swap_horiz, actionbt[2]), // Swap
             _buildActionButton(Icons.shopping_cart, actionbt[3]), // Buy
-            _buildActionButton(Icons.sell, actionbt[4]), // Sell
+            // Sell
           ],
         ),
         Container(
