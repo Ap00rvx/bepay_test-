@@ -26,9 +26,14 @@ class ActionButtonWidget extends StatelessWidget {
           border: Border.all(color: AppColors.lightGrey, width: 1),
           boxShadow: [
             BoxShadow(
+              color: AppColors.primaryWhite,
+              blurRadius: 4,
+              offset: const Offset(-2, -2),
+            ),
+            BoxShadow(
               color: AppColors.shadowLight,
               blurRadius: 4,
-              offset: const Offset(0, 2),
+              offset: const Offset(2, 2),
             ),
           ],
         ),
@@ -37,18 +42,15 @@ class ActionButtonWidget extends StatelessWidget {
           children: [
             Container(
               padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                color: AppColors.lightestGrey,
-                borderRadius: BorderRadius.circular(8),
-              ),
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
               child: icon,
             ),
-            const SizedBox(height: 12),
+
             Text(
               label,
               style: const TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.w500,
+                fontSize: 14,
+                fontWeight: FontWeight.w700,
                 color: AppColors.primaryText,
               ),
               textAlign: TextAlign.center,

@@ -1,5 +1,6 @@
 import 'package:bp_ui/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
 class BottomNavWidget extends StatelessWidget {
   final int currentIndex;
@@ -33,33 +34,33 @@ class BottomNavWidget extends StatelessWidget {
             children: [
               _buildNavItem(
                 index: 0,
-                icon: Icons.account_balance_wallet_outlined,
-                activeIcon: Icons.account_balance_wallet,
+                icon: Iconsax.wallet_24,
+                activeIcon: Iconsax.wallet_2,
                 label: 'Services',
               ),
               _buildNavItem(
                 index: 1,
-                icon: Icons.pie_chart_outline,
-                activeIcon: Icons.pie_chart,
-                label: 'Assets',
+                icon: Iconsax.card,
+                activeIcon: Iconsax.card,
+                label: 'Cards',
               ),
               _buildNavItem(
                 index: 2,
-                icon: Icons.currency_exchange_outlined,
-                activeIcon: Icons.currency_exchange,
-                label: 'Fiat',
+                icon: Iconsax.scan4,
+                activeIcon: Iconsax.scan4,
+                label: 'Scan & Pay',
               ),
               _buildNavItem(
                 index: 3,
-                icon: Icons.token_outlined,
-                activeIcon: Icons.token,
-                label: 'NFT',
+                icon: Iconsax.global4,
+                activeIcon: Iconsax.global4,
+                label: 'Explore',
               ),
               _buildNavItem(
                 index: 4,
-                icon: Icons.card_giftcard_outlined,
-                activeIcon: Icons.card_giftcard,
-                label: 'Airdrops',
+                icon: Iconsax.gift4,
+                activeIcon: Iconsax.gift4,
+                label: 'Rewards',
               ),
             ],
           ),

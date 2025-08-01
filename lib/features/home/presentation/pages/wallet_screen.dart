@@ -6,6 +6,7 @@ import 'package:bp_ui/features/home/presentation/widgets/balance_widget.dart';
 import 'package:bp_ui/features/home/presentation/widgets/bottom_nav_widget.dart';
 import 'package:bp_ui/features/home/presentation/widgets/header_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
 class WalletScreen extends StatefulWidget {
   const WalletScreen({super.key});
@@ -19,51 +20,84 @@ class _WalletScreenState extends State<WalletScreen> {
 
   final List<ActionModel> actions = [
     ActionModel(
-      const Icon(
-        Icons.qr_code_scanner,
-        size: 24,
-        color: AppColors.primaryBlack,
+      Image.asset(
+        'assets/images/Scan and pay icon 2.png',
+        width: 30,
+        height: 30,
+        fit: BoxFit.fill,
       ),
       'Scan QR & pay\nvia crypto',
     ),
     ActionModel(
-      const Icon(
-        Icons.account_balance,
-        size: 24,
-        color: AppColors.primaryBlack,
+      Image.asset(
+        'assets/images/Bank account icon.png',
+        width: 30,
+        height: 30,
+        fit: BoxFit.fill,
       ),
       'Cashout',
     ),
     ActionModel(
-      const Icon(Icons.card_giftcard, size: 24, color: AppColors.primaryBlack),
+      Image.asset(
+        'assets/images/Gift card icon.png',
+        width: 30,
+        height: 30,
+        fit: BoxFit.fill,
+      ),
       'Send gift',
     ),
     ActionModel(
-      const Icon(
-        Icons.currency_bitcoin,
-        size: 24,
-        color: AppColors.primaryBlack,
+      Image.asset(
+        'assets/images/BTC backed loan icon.png',
+        width: 30,
+        height: 30,
       ),
       'Bitcoin loan',
     ),
     ActionModel(
-      const Icon(Icons.flight, size: 24, color: AppColors.primaryBlack),
+      Image.asset(
+        'assets/images/Travel icon 3.png',
+        width: 30,
+        height: 30,
+        fit: BoxFit.fill,
+      ),
       'Travel booking',
     ),
     ActionModel(
-      const Icon(Icons.redeem, size: 24, color: AppColors.primaryBlack),
+      Image.asset(
+        'assets/images/Gift icon.png',
+        width: 30,
+        height: 30,
+        fit: BoxFit.fill,
+      ),
       'Gift cards',
     ),
     ActionModel(
-      const Icon(Icons.military_tech, size: 24, color: AppColors.primaryBlack),
+      Image.asset(
+        'assets/images/gold.png',
+        width: 30,
+        height: 30,
+        fit: BoxFit.fill,
+      ),
       'Invest in gold',
     ),
     ActionModel(
-      const Icon(Icons.home_work, size: 24, color: AppColors.primaryBlack),
+      Image.asset(
+        'assets/images/real_estate.png',
+        width: 30,
+        height: 30,
+        fit: BoxFit.fill,
+      ),
       'Invest in\nreal estate',
     ),
     ActionModel(
-      const Icon(Icons.link, size: 24, color: AppColors.primaryBlack),
+      Image.asset(
+        'assets/images/Palla finance logo.png',
+        // add grey scale
+        color: AppColors.mediumGrey,
+        width: 30,
+        height: 30,
+      ),
       'Palla integration',
     ),
   ];
@@ -85,8 +119,8 @@ class _WalletScreenState extends State<WalletScreen> {
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 3,
                     childAspectRatio: 1.0,
-                    crossAxisSpacing: 8,
-                    mainAxisSpacing: 8,
+                    crossAxisSpacing: 2,
+                    mainAxisSpacing: 2,
                   ),
                   itemCount: actions.length,
                   itemBuilder: (context, index) {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   // Color palette
@@ -15,6 +16,7 @@ class AppTheme {
       primaryColor: _primaryBlack,
       scaffoldBackgroundColor: _primaryWhite,
       visualDensity: VisualDensity.adaptivePlatformDensity,
+      
 
       // Color scheme
       colorScheme: const ColorScheme.light(
@@ -94,49 +96,21 @@ class AppTheme {
       ),
 
       // Text theme
-      textTheme: const TextTheme(
-        displayLarge: TextStyle(
-          color: _primaryBlack,
-          fontWeight: FontWeight.bold,
+      textTheme: GoogleFonts.openSansTextTheme(
+        ThemeData.light().textTheme.copyWith(
+          displayLarge: TextStyle(
+            color: _primaryBlack,
+            fontWeight: FontWeight.bold,
+          ),
+          displayMedium: TextStyle(
+            color: _primaryBlack,
+            fontWeight: FontWeight.bold,
+          ),
+          displaySmall: TextStyle(
+            color: _primaryBlack,
+            fontWeight: FontWeight.bold,
+          ),
         ),
-        displayMedium: TextStyle(
-          color: _primaryBlack,
-          fontWeight: FontWeight.bold,
-        ),
-        displaySmall: TextStyle(
-          color: _primaryBlack,
-          fontWeight: FontWeight.bold,
-        ),
-        headlineLarge: TextStyle(
-          color: _primaryBlack,
-          fontWeight: FontWeight.w600,
-        ),
-        headlineMedium: TextStyle(
-          color: _primaryBlack,
-          fontWeight: FontWeight.w600,
-        ),
-        headlineSmall: TextStyle(
-          color: _primaryBlack,
-          fontWeight: FontWeight.w600,
-        ),
-        titleLarge: TextStyle(
-          color: _primaryBlack,
-          fontWeight: FontWeight.w500,
-        ),
-        titleMedium: TextStyle(
-          color: _primaryBlack,
-          fontWeight: FontWeight.w500,
-        ),
-        titleSmall: TextStyle(
-          color: _primaryBlack,
-          fontWeight: FontWeight.w500,
-        ),
-        bodyLarge: TextStyle(color: _primaryBlack),
-        bodyMedium: TextStyle(color: _primaryBlack),
-        bodySmall: TextStyle(color: _mediumGrey),
-        labelLarge: TextStyle(color: _primaryBlack),
-        labelMedium: TextStyle(color: _primaryBlack),
-        labelSmall: TextStyle(color: _mediumGrey),
       ),
 
       // Icon theme
